@@ -52,10 +52,23 @@ header .logo {
 }
 header.flex-container {
   justify-content: space-between;
+  align-items: center;
 }
-header nav a {
-  display: inline-block;
-  margin: 20px 30px;
+header nav .flex-container {
+  width: 600px;
+  justify-content: space-evenly;
+}
+header nav li {
+  list-style: none;
+}
+header nav li a{
+  display: block;
+  padding: 20px 30px;
+}
+header nav li:hover {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 30px;
+  cursor: pointer;
 }
 
 /* HERO SECTION */
