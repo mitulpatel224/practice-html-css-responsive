@@ -60,7 +60,7 @@ header nav a {
 
 /* HERO SECTION */
 .hero {
-  background-image: url("/images/desktop/image-header.jpg");
+  background-image: url("./images/desktop/image-header.jpg");
   background-position: center;
   background-size: cover;
   height: 890px;
@@ -89,16 +89,16 @@ header nav a {
   background-size: cover;
 }
 .bg-transform {
-  background-image: url("images/desktop/image-transform.jpg");
+  background-image: url("./images/desktop/image-transform.jpg");
 }
 .bg-stand-out {
-  background-image: url("images/desktop/image-stand-out.jpg");
+  background-image: url("./images/desktop/image-stand-out.jpg");
 }
 .bg-graphic {
-  background-image: url(/images/desktop/image-graphic-design.jpg);
+  background-image: url("./images/desktop/image-graphic-design.jpg");
 }
 .bg-photography {
-  background-image: url("/images/desktop/image-photography.jpg");
+  background-image: url("./images/desktop/image-photography.jpg");
 }
 .banner-content {
   word-wrap: break-word;
@@ -230,19 +230,19 @@ footer nav a:hover {
 /* MEDIA QUERY FOR TABLET DEVICES */
 @media only screen and (max-width: 769px) {
   .hero {
-    background-image: url("images/mobile/image-header.jpg");
+    background-image: url("./images/mobile/image-header.jpg");
   }
   .bg-transform {
-    background-image: url("images/mobile/image-transform.jpg");
+    background-image: url("./images/mobile/image-transform.jpg");
   }
   .bg-stand-out {
-    background-image: url("images/mobile/image-stand-out.jpg");
+    background-image: url("./images/mobile/image-stand-out.jpg");
   }
   .bg-graphic {
-    background-image: url("images/mobile/image-graphic-design.jpg");
+    background-image: url("./images/mobile/image-graphic-design.jpg");
   }
   .bg-photography {
-    background-image: url("images/mobile/image-photography.jpg");
+    background-image: url("./images/mobile/image-photography.jpg");
   }
   .hero {
     height: 950px;
