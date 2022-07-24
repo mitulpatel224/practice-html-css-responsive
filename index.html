@@ -20,13 +20,19 @@
     <!-- HEADER SECTION STARTS -->
     <header id="myHeader" class="flex-container">
         <img class="logo" src="images/logo.svg" alt="logo">
-        <!-- <nav id="navmenu" class="flex-container">
-            <a title="About" href="#">About</a>
-            <a title="Services" href="#">Services</a>
-            <a title="Projects" href="#">Projects</a>
-            <a title="Contact" href="#">Contact</a>
-        </nav> -->
+        <button class="navbar-toggle" onclick="toggle()">
+            <span class="icon-hamburger"></span>
+        </button>
         <nav id="navmenu">
+            <ul class="flex-container">
+                <li><a title="About" href="#">About</a></li>
+                <li> <a title="Services" href="#">Services</a></li>
+                <li> <a title="Projects" href="#">Projects</a></li>
+                <li> <a title="Contact" href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <nav id="mobile" class="navbar-mobile">
+            <span class="navbar-mobile-pointer"></span>
             <ul class="flex-container">
                 <li><a title="About" href="#">About</a></li>
                 <li> <a title="Services" href="#">Services</a></li>
@@ -179,11 +185,13 @@
             </div>
         </div>
     </footer>
-    <!-- <script>
-        window.onscroll = function () { myFunction() };
+    <script>
+        const header = document.getElementById("myHeader");
+        const sticky = header.offsetTop;
+        const mobileMenu = document.getElementById("mobile");
+        let mobileMenuVisible = false;
 
-        var header = document.getElementById("myHeader");
-        var sticky = header.offsetTop;
+        window.onscroll = function () { myFunction() };
 
         function myFunction() {
             if (window.pageYOffset > sticky) {
@@ -192,7 +200,16 @@
                 header.classList.remove("sticky");
             }
         }
-    </script> -->
+
+        function toggle() {
+            mobileMenuVisible = !mobileMenuVisible;
+            if (mobileMenuVisible) {
+                mobileMenu.classList.add('visible');
+            } else {
+                mobileMenu.classList.remove('visible');
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -45,30 +45,82 @@ h3 {
 header {
   background-color: #3ebfff;
   height: 80px;
+  position: relative;
 }
 header .logo {
   margin: 15px 30px;
   height: 40px;
 }
+header nav ul {
+  padding: 0;
+}
 header.flex-container {
   justify-content: space-between;
   align-items: center;
 }
+header .navbar-mobile .flex-container {
+  flex-direction: column;
+  align-items: center;
+}
+header nav.navbar-mobile {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  background: #fff;
+  left: 20px;
+  right: 20px;
+  top: 100px;
+  color: black;
+}
+header nav.navbar-mobile .navbar-mobile-pointer {
+  position: absolute;
+  right: 0;
+  top: -30px;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-right: 30px solid #fff;
+}
+header .navbar-mobile a {
+  color: black;
+}
+header .navbar-mobile.visible {
+  display: block;
+}
+header .navbar-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.icon-hamburger {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  background-image: url("./images/icon-hamburger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+header nav {
+  display: block;
+}
 header nav .flex-container {
-  width: 600px;
+  width: 100%;
   justify-content: space-evenly;
 }
 header nav li {
   list-style: none;
 }
-header nav li a{
+header nav li a {
   display: block;
-  padding: 20px 30px;
+  padding: 20px;
 }
 header nav li:hover {
   background: rgba(255, 255, 255, 0.4);
   border-radius: 30px;
   cursor: pointer;
+}
+header nav.navbar-mobile li:hover {
+  background-color: hsl(51, 100%, 49%);
 }
 
 /* HERO SECTION */
@@ -280,15 +332,28 @@ footer nav a:hover {
   .testimonials h3 {
     margin: 60px;
   }
+  header nav .flex-container {
+    width: auto;
+  }
+  header nav li a {
+    padding: 10px;
+  }
 }
 
 /* MEDIA QUERY FOR MOBILE DEVICES */
 @media only screen and (max-width: 600px) {
   header .logo {
-    margin: 15px auto;
+    margin: 15px;
   }
   header nav {
-    display: none !important;
+    display: none;
+  }
+  header nav.visible {
+    display: block;
+  }
+  header .navbar-toggle {
+    margin: 15px;
+    display: block;
   }
   .hero h1 {
     font-size: 42px !important;
